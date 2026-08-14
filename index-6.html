@@ -804,152 +804,6 @@
   border:0;
 }
 
-
-/* ——— PROJECT MEDIA ——— */
-.project-thumb-media {
-  height:220px;
-  padding:0 !important;
-  background:#f8eef1;
-  overflow:hidden;
-}
-.project-thumb-media::after { display:none; }
-.project-thumb-media img {
-  width:100%;
-  height:100%;
-  display:block;
-  object-position:center;
-  background:#fff;
-}
-.project-media {
-  margin-top:22px;
-  padding-top:18px;
-  border-top:1px solid var(--border);
-}
-.project-media-title {
-  margin-bottom:12px;
-  color:var(--pink);
-  font-size:.73rem;
-  font-weight:700;
-  letter-spacing:.09em;
-  text-transform:uppercase;
-}
-.project-media-grid {
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:12px;
-}
-.project-media-item {
-  margin:0;
-  overflow:hidden;
-  border-radius:16px;
-  border:1px solid var(--border);
-  background:white;
-}
-.project-media-item img {
-  width:100%;
-  height:210px;
-  display:block;
-  object-fit:contain;
-  background:#faf7f8;
-}
-.project-media-item figcaption {
-  padding:9px 11px 11px;
-  font-size:.72rem;
-  line-height:1.4;
-  color:var(--mid);
-}
-.project-media-grid .project-media-item:only-child {
-  grid-column:1 / -1;
-}
-.project-media-grid .project-media-item:only-child img {
-  height:280px;
-}
-@media (max-width:768px) {
-  .project-thumb-media { height:200px; }
-  .project-media-grid { grid-template-columns:1fr; }
-  .project-media-item img,
-  .project-media-grid .project-media-item:only-child img { height:auto; max-height:420px; }
-}
-
-
-/* ——— RESPONSIVE DRIVE VIDEO EMBEDS ——— */
-.drive-embed {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #f7edf1;
-  border: 1px solid rgba(232,99,122,.14);
-  box-shadow: 0 10px 30px rgba(70,32,45,.06);
-}
-.drive-embed iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-.drive-embed-wide {
-  aspect-ratio: 16 / 9;
-  min-height: 220px;
-}
-.drive-embed-vertical {
-  aspect-ratio: 9 / 16;
-  min-height: 360px;
-}
-.alumni-video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 16px;
-  align-items: start;
-}
-.alumni-video-card {
-  min-width: 0;
-}
-.alumni-video-card .drive-embed {
-  width: 100%;
-}
-.project-video-highlight .drive-embed {
-  margin-top: 8px;
-}
-@media (max-width: 980px) {
-  .alumni-video-grid {
-    grid-template-columns: repeat(2, minmax(0,1fr));
-  }
-}
-@media (max-width: 640px) {
-  .video-modal {
-    padding: 8px;
-    align-items: flex-start;
-  }
-  .video-modal-panel {
-    width: 100%;
-    max-height: 96vh;
-    padding: 16px;
-    border-radius: 20px;
-  }
-  .video-modal-head {
-    gap: 12px;
-  }
-  .alumni-video-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .drive-embed-vertical {
-    aspect-ratio: 9 / 16;
-    min-height: 0;
-  }
-  .drive-embed-wide {
-    aspect-ratio: 16 / 9;
-    min-height: 0;
-  }
-}
-@supports not (aspect-ratio: 1 / 1) {
-  .drive-embed-wide { height: 0; padding-bottom: 56.25%; }
-  .drive-embed-vertical { height: 0; padding-bottom: 177.7778%; }
-}
-
 </style>
 </head>
 <body>
@@ -1105,9 +959,7 @@
     <div class="projects-grid">
 
 <article class="project-card reveal" data-delay="1">
-        <div class="project-thumb project-thumb-media">
-          <img src="./IMAGES/tiktok-channel.png" alt="TikTok channel — Trạm Du Học Trung Quốc" loading="lazy" style="object-fit:contain">
-        </div>
+        <div class="project-thumb p-api"><span style="color:white">TikTok Channel Growth<br>Trạm Du Học Trung Quốc</span></div>
         <div class="project-body">
           <div class="project-tag">Content Strategy · Short-form Video · Lead Generation</div>
           <div class="project-name">TikTok Channel Growth — Trạm Du Học Trung Quốc</div>
@@ -1149,31 +1001,12 @@
             </div>
           
 
-          
-      <div class="project-media">
-        <div class="project-media-title">Visual Highlights</div>
-        <div class="project-media-grid">
-          
-        <figure class="project-media-item">
-          <img src="./IMAGES/tiktok-channel.png" alt="TikTok channel growth" loading="lazy">
-          <figcaption>TikTok channel growth</figcaption>
-        </figure>
-
-        <figure class="project-media-item">
-          <img src="./IMAGES/tiktok-content-plan.png" alt="Content planning & performance tracking" loading="lazy">
-          <figcaption>Content planning & performance tracking</figcaption>
-        </figure>
-        </div>
-      </div>
-    
-</details>
+          </details>
         </div>
       </article>
 
 <article class="project-card reveal" data-delay="4">
-        <div class="project-thumb project-thumb-media">
-          <img src="./IMAGES/alumni-story-02.png" alt="Student testimonial & alumni storytelling" loading="lazy" style="object-fit:cover">
-        </div>
+        <div class="project-thumb p-mobile"><span>Student Testimonial &amp;<br>Alumni Content</span></div>
         <div class="project-body">
           <div class="project-tag">UGC · Testimonial · Storytelling · Brand Trust</div>
           <div class="project-name">Student Testimonial &amp; Alumni Content</div>
@@ -1224,16 +1057,18 @@
               <p style="margin-top:12px"><strong>Workflow:</strong> Interview → Storytelling → Script → Content Direction → Shooting Guidance → Editing → Final Asset</p>
             </div>
           
-
-    
+<div class="project-video-highlight">
+  <div class="video-label"><span>Selected Video</span><span>Student Story</span></div>
+  <video controls playsinline muted preload="metadata">
+    <source src="./VIDEO/alumni-highlight.mp4" type="video/mp4">
+  </video>
+</div>
 </details>
         </div>
       </article>
 
 <article class="project-card reveal" data-delay="2">
-        <div class="project-thumb project-thumb-media">
-          <img src="./IMAGES/referral-8mar-keyvisual.png" alt="8/3 Referral Campaign — Chạm Cảm Xúc, Mở Kết Nối" loading="lazy" style="object-fit:cover">
-        </div>
+        <div class="project-thumb p-mobile"><span>8/3 Referral Campaign<br>“Chạm Cảm Xúc, Mở Kết Nối”</span></div>
         <div class="project-body">
           <div class="project-tag">Brand Love · Referral Marketing · Customer Re-engagement</div>
           <div class="project-name">8/3 Referral Campaign — “Chạm Cảm Xúc, Mở Kết Nối”</div>
@@ -1269,31 +1104,12 @@
                 <div class="result-chip"><strong>240M+ VND</strong> revenue supported</div>
               </div>
             </div>
-          
-      <div class="project-media">
-        <div class="project-media-title">Visual Highlights</div>
-        <div class="project-media-grid">
-          
-        <figure class="project-media-item">
-          <img src="./IMAGES/referral-8mar-keyvisual.png" alt="8/3 campaign key visual" loading="lazy">
-          <figcaption>8/3 campaign key visual</figcaption>
-        </figure>
-
-        <figure class="project-media-item">
-          <img src="./IMAGES/referral-8mar-social-posts.png" alt="Campaign social content" loading="lazy">
-          <figcaption>Campaign social content</figcaption>
-        </figure>
-        </div>
-      </div>
-    
-</details>
+          </details>
         </div>
       </article>
 
 <article class="project-card reveal" data-delay="3">
-        <div class="project-thumb project-thumb-media">
-          <img src="./IMAGES/koc-partner-channel.png" alt="KOC partnership content channel" loading="lazy" style="object-fit:cover">
-        </div>
+        <div class="project-thumb p-perf"><span>KOC Partnership<br>Content → Lead Generation</span></div>
         <div class="project-body">
           <div class="project-tag">KOC Partnership · Lead Generation · Content Distribution</div>
           <div class="project-name">KOC Partnership — Content → Lead Generation</div>
@@ -1325,26 +1141,12 @@
                 <div class="result-chip"><strong>New lead source</strong> outside owned channels</div>
               </div>
             </div>
-          
-      <div class="project-media">
-        <div class="project-media-title">Visual Highlights</div>
-        <div class="project-media-grid">
-          
-        <figure class="project-media-item">
-          <img src="./IMAGES/koc-partner-channel.png" alt="KOC partner content channel" loading="lazy">
-          <figcaption>KOC partner content channel</figcaption>
-        </figure>
-        </div>
-      </div>
-    
-</details>
+          </details>
         </div>
       </article>
 
 <article class="project-card reveal" data-delay="6">
-        <div class="project-thumb project-thumb-media">
-          <img src="./IMAGES/sendoff-communication.png" alt="ESORA Send-off 2026 communication highlights" loading="lazy" style="object-fit:cover">
-        </div>
+        <div class="project-thumb p-perf"><span>ESORA Send-off 2026<br>“Wings of Tomorrow”</span></div>
         <div class="project-body">
           <div class="project-tag">Event Communication · Storytelling · UGC · Multi-channel Content</div>
           <div class="project-name">ESORA Send-off 2026 — Event Content &amp; Communication</div>
@@ -1401,41 +1203,22 @@
 
 <div class="project-video-highlight">
   <div class="video-label"><span>Selected Video</span><span>Event Recap</span></div>
-  <div class="drive-embed drive-embed-wide">
-          <iframe
-            src="https://drive.google.com/file/d/1MdbSyPr2p8XDrS_vIKCMWlBeJPW6hjHF/preview"
-            title="ESORA Send-off 2026 — Wings of Tomorrow"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy"></iframe>
-        </div>
+  <div class="drive-video-wrap">
+    <iframe
+      src="https://drive.google.com/file/d/1MdbSyPr2p8XDrS_vIKCMWlBeJPW6hjHF/preview"
+      title="ESORA Send-off 2026 — Wings of Tomorrow"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      loading="lazy"></iframe>
+  </div>
 </div>
 
-
-      <div class="project-media">
-        <div class="project-media-title">Visual Highlights</div>
-        <div class="project-media-grid">
-          
-        <figure class="project-media-item">
-          <img src="./IMAGES/sendoff-communication.png" alt="Post-event communication ecosystem" loading="lazy">
-          <figcaption>Post-event communication ecosystem</figcaption>
-        </figure>
-
-        <figure class="project-media-item">
-          <img src="./IMAGES/sendoff-content-plan.png" alt="Send-off content planning" loading="lazy">
-          <figcaption>Send-off content planning</figcaption>
-        </figure>
-        </div>
-      </div>
-    
 </details>
         </div>
       </article>
 
 <article class="project-card reveal" data-delay="5">
-        <div class="project-thumb project-thumb-media">
-          <img src="./IMAGES/seo-editorial-article.png" alt="SEO & editorial published article" loading="lazy" style="object-fit:contain">
-        </div>
+        <div class="project-thumb p-web"><span>SEO &amp; Editorial Content</span></div>
         <div class="project-body">
           <div class="project-tag">SEO Content · Search Intent · Editorial Writing</div>
           <div class="project-name">SEO &amp; Editorial Content</div>
@@ -1473,28 +1256,10 @@
 
               <p style="margin-top:14px"><a href="https://tuoitre.vn/phunuonline/nu-sinh-pho-thong-nang-khieu-chinh-phuc-hoc-bong-erasmus-rotterdam-bat-mi-bi-quyet-san-hoc-bong-ha-lan-cung-esora-academy-1101584734.htm" target="_blank" rel="noopener" style="color:var(--pink);font-weight:600;text-decoration:none">View published article ↗</a></p>
             </div>
-          
-      <div class="project-media">
-        <div class="project-media-title">Visual Highlights</div>
-        <div class="project-media-grid">
-          
-        <figure class="project-media-item">
-          <img src="./IMAGES/seo-editorial-article.png" alt="Published editorial article" loading="lazy">
-          <figcaption>Published editorial article</figcaption>
-        </figure>
-
-        <figure class="project-media-item">
-          <img src="./IMAGES/seo-content-planning.png" alt="SEO / editorial content planning" loading="lazy">
-          <figcaption>SEO / editorial content planning</figcaption>
-        </figure>
-        </div>
-      </div>
-    
-</details>
+          </details>
         </div>
       </article>
     </div>
-
 
 
 
@@ -1577,7 +1342,7 @@
 <script>
 
   // Bilingual EN / VI switch
-  const translationsVI = {"About":"Giới thiệu","Skills":"Kỹ năng","Projects":"Dự án","Experience":"Kinh nghiệm","Contact":"Liên hệ","Let's Talk 💬":"Trao đổi nhé 💬","Hi there! I'm 👋":"Xin chào, mình là 👋","My (Rachel)":"My Phan","Phan":"(Rachel)","Content Marketing & Branding Fresher":"Content Marketing & Branding Fresher","I’m a Marketing graduate-to-be with nearly 1 year of hands-on experience in content marketing, branding, and communication. I create brand-focused content, campaign messages, visual briefs, and social media content that help ideas become clear, consistent, and ready to execute.":"Mình sắp tốt nghiệp ngành Marketing và có gần 1 năm kinh nghiệm thực tế về content marketing, branding và truyền thông. Mình xây dựng nội dung bám sát thương hiệu, thông điệp chiến dịch, visual brief và nội dung mạng xã hội, giúp ý tưởng trở nên rõ ràng, nhất quán và sẵn sàng triển khai.","⚙️ View My Work":"⚙️ Xem dự án","⬇ Download CV":"⬇ Tải CV","Year Hands-on Experience":"Năm kinh nghiệm thực tế","Marketing Projects":"Dự án marketing","About Me":"Về mình","Creating content that is clear, strategic, and":"Tạo ra nội dung rõ ràng, có định hướng và","ready to execute.":"sẵn sàng để triển khai.","I’m Rachel, a Marketing graduate-to-be based in Ho Chi Minh City. My main focus is content marketing and branding, especially creating content that is clear, consistent with the brand, and aligned with communication goals.":"Mình là Rachel, hiện sống tại TP. Hồ Chí Minh và sắp tốt nghiệp ngành Marketing. Mình tập trung vào content marketing và branding, đặc biệt là xây dựng nội dung rõ ràng, nhất quán với thương hiệu và đúng mục tiêu truyền thông.","Through my experience at ESORA Academy and HUMA Agency, I have worked on social media content, campaign concepts, visual briefs, brand messaging, SEO content outlines, testimonial content, and internal communication content.":"Trong thời gian làm việc tại ESORA Academy và HUMA Agency, mình đã tham gia xây dựng nội dung mạng xã hội, ý tưởng chiến dịch, visual brief, thông điệp thương hiệu, dàn ý SEO, nội dung testimonial và truyền thông nội bộ.","At ESORA Academy, I supported campaigns that combined emotional brand communication with business goals, including referral marketing, product launch communication, KOC lead generation, and student testimonial content.":"Tại ESORA Academy, mình tham gia các chiến dịch kết hợp cảm xúc thương hiệu với mục tiêu kinh doanh, gồm referral marketing, truyền thông ra mắt sản phẩm, tạo lead qua KOC và phát triển nội dung testimonial từ học viên.","I’m interested in Content Marketing and Branding roles where I can continue developing content that is not only well-written, but also clear, strategic, and useful for real marketing activities.":"Mình đang tìm kiếm cơ hội trong lĩnh vực Content Marketing và Branding, nơi mình có thể tiếp tục phát triển những nội dung không chỉ chỉn chu về câu chữ mà còn rõ ràng, có chiến lược và mang lại giá trị thực tế cho hoạt động marketing.","Content Marketing":"Content Marketing","Branding":"Branding","Campaign Communication":"Truyền thông chiến dịch","Visual Brief":"Visual Brief","Social Content":"Nội dung mạng xã hội","~1 Year":"Gần 1 năm","Hands-on Experience":"Kinh nghiệm thực tế","Content Pieces / Month":"Nội dung / tháng","KOC Leads / Month Supported":"Lead KOC / tháng được hỗ trợ","VND Referral Revenue Supported":"Doanh thu referral được hỗ trợ","What I Do Best":"Thế mạnh của mình","Skills &":"Kỹ năng &","Expertise":"Chuyên môn","Social captions, SEO outlines,":"Caption mạng xã hội, dàn ý SEO,","video scripts, campaign copy":"kịch bản video, nội dung chiến dịch","Brand messaging, tone of voice,":"Thông điệp thương hiệu, tone of voice,","positioning, storytelling":"định vị và storytelling","Referral, product launch,":"Referral, ra mắt sản phẩm,","internal & event content":"truyền thông nội bộ và sự kiện","Creative Brief":"Creative Brief","Visual direction, layouts,":"Định hướng hình ảnh, bố cục,","designer coordination":"phối hợp cùng designer","Marketing Communication":"Truyền thông Marketing","KOC support, UGC direction,":"Hỗ trợ KOC, định hướng UGC,","customer re-engagement":"kết nối lại khách hàng","Tools":"Công cụ","Canva, Google Workspace, Sheets,":"Canva, Google Workspace, Sheets,","PowerPoint, SPSS, basic Power BI":"PowerPoint, SPSS, Power BI cơ bản","Selected Projects":"Dự án tiêu biểu","Content with":"Nội dung tạo ra","real business impact":"tác động kinh doanh thực tế","8/3 Referral Campaign":"Chiến dịch Referral 8/3","Brand Love · Referral Marketing":"Gắn kết thương hiệu · Referral Marketing","A Women’s Day campaign that reconnected ESORA with existing parents and students, strengthened brand love, and supported referral revenue.":"Chiến dịch Ngày Quốc tế Phụ nữ giúp ESORA kết nối lại với phụ huynh và học viên hiện tại, tăng sự gắn kết với thương hiệu và hỗ trợ doanh thu referral.","Brand Communication":"Truyền thông thương hiệu","Customer Re-engagement":"Kết nối lại khách hàng","View case study":"Xem case study","Context & Role":"Bối cảnh & Vai trò","In March 2026, ESORA Academy launched a Women’s Day campaign to reconnect with existing customers and introduce its referral program naturally. I supported campaign direction and content communication.":"Tháng 3/2026, ESORA Academy triển khai chiến dịch 8/3 nhằm kết nối lại với khách hàng hiện tại và giới thiệu chương trình referral theo cách tự nhiên hơn. Mình hỗ trợ định hướng chiến dịch và nội dung truyền thông.","What I Did":"Những gì mình thực hiện","Created communication content for photo check-ins and gift activities.":"Xây dựng nội dung truyền thông cho hoạt động check-in chụp ảnh và tặng quà.","Developed emotional content angles around appreciation and parent–student relationships.":"Phát triển các góc nội dung cảm xúc về sự trân trọng và mối quan hệ phụ huynh – học viên.","Connected brand-love activities with referral messaging.":"Kết nối hoạt động gia tăng tình cảm thương hiệu với thông điệp referral.","Created social posts and coordinated ideas for student wishes, clips, and customer-care touchpoints.":"Xây dựng bài đăng mạng xã hội và phối hợp ý tưởng cho lời chúc của học viên, video ngắn và các điểm chạm chăm sóc khách hàng.","Results":"Kết quả","active parents/customers":"phụ huynh/khách hàng đang hoạt động","referral contracts":"hợp đồng referral","revenue supported":"doanh thu được hỗ trợ","social posts published":"bài đăng được xuất bản","Summer China Program":"Chương trình hè Trung Quốc","Beijing & Tianjin":"Bắc Kinh & Thiên Tân","Product Communication · Education Marketing":"Truyền thông sản phẩm · Education Marketing","Summer China Program Launch":"Ra mắt chương trình hè Trung Quốc","A product communication project for students aged 15+ seeking cultural exposure, university experience, and stronger scholarship profiles.":"Dự án truyền thông sản phẩm dành cho học sinh từ 15 tuổi muốn trải nghiệm văn hóa, môi trường đại học và xây dựng hồ sơ học bổng tốt hơn.","Audience Research":"Nghiên cứu đối tượng","My Role":"Vai trò của mình","I supported target-audience research, content direction, and communication angles for Facebook, Instagram, and TikTok.":"Mình hỗ trợ nghiên cứu đối tượng mục tiêu, định hướng nội dung và phát triển góc truyền thông cho Facebook, Instagram và TikTok.","Mapped student motivations and scholarship-related pain points.":"Phân tích động lực và những khó khăn của học sinh liên quan đến việc chuẩn bị hồ sơ học bổng.","Positioned the program as an early profile-building experience, not only a summer trip.":"Định vị chương trình như một trải nghiệm xây dựng hồ sơ từ sớm, thay vì chỉ là một chuyến đi hè.","Supported social assets that explained the program’s practical value.":"Hỗ trợ phát triển nội dung mạng xã hội nhằm truyền tải rõ giá trị thực tế của chương trình.","organic TikTok views":"lượt xem TikTok tự nhiên","enrolled students":"học viên đăng ký","Break-even":"Hòa vốn","target achieved":"đạt mục tiêu","New product":"Sản phẩm mới","awareness supported":"được hỗ trợ nhận diện","KOC Lead Generation":"Tạo lead qua KOC","Partnership":"Hợp tác","KOC Partnership · Lead Generation":"Hợp tác KOC · Tạo lead","KOC Lead Generation Partnership":"Dự án hợp tác tạo lead qua KOC","A partnership project that expanded content distribution and supported a new qualified-lead source outside the brand’s owned channels.":"Dự án hợp tác giúp mở rộng kênh phân phối nội dung và tạo thêm nguồn lead chất lượng ngoài các kênh sở hữu của thương hiệu.","Content Distribution":"Phân phối nội dung","Partnership Support":"Hỗ trợ đối tác","Researched and shortlisted relevant KOC partners.":"Nghiên cứu và sàng lọc các KOC phù hợp.","Supported collaboration policies and working processes.":"Hỗ trợ xây dựng chính sách hợp tác và quy trình làm việc.","Coordinated content direction and lead-generation goals.":"Phối hợp định hướng nội dung và mục tiêu tạo lead.","Helped build an external lead source for the brand.":"Góp phần xây dựng nguồn lead bên ngoài cho thương hiệu.","Result":"Kết quả","qualified leads / month":"lead chất lượng / tháng","New channel":"Kênh mới","outside owned media":"ngoài kênh sở hữu","Student Ambassador &":"Đại sứ học viên &","UGC Content Project":"Dự án nội dung UGC","UGC · Testimonial · Brand Trust":"UGC · Testimonial · Niềm tin thương hiệu","Student Ambassador & UGC Content":"Dự án Đại sứ học viên & Nội dung UGC","A project that transformed real student and alumni experiences into authentic brand communication assets.":"Dự án chuyển hóa trải nghiệm thật của học viên và cựu học viên thành tài sản truyền thông chân thực cho thương hiệu.","Content Direction":"Định hướng nội dung","Story Development":"Phát triển câu chuyện","Managed communication with 64 students and alumni.":"Phụ trách trao đổi với 64 học viên và cựu học viên.","Created video directions, script guidance, and storytelling angles.":"Xây dựng định hướng video, hướng dẫn kịch bản và góc kể chuyện.","Helped shape relatable testimonial and UGC content for social media.":"Góp phần phát triển nội dung testimonial và UGC gần gũi cho mạng xã hội.","student/alumni contacts":"học viên/cựu học viên được kết nối","organic Facebook reach on one video":"lượt tiếp cận Facebook tự nhiên của một video","Long-term":"Dài hạn","testimonial source built":"xây dựng nguồn testimonial","Authentic":"Chân thực","brand trust assets":"tài sản tạo niềm tin thương hiệu","HSK SEO Content Planning":"Lập kế hoạch nội dung SEO HSK","SEO Content · Search Intent":"Nội dung SEO · Search Intent","Built reader-friendly SEO outlines for HSK1–HSK5, exam fees, and beginner Chinese-learning topics, balancing search intent with clear content structure.":"Xây dựng dàn ý SEO dễ đọc cho các chủ đề HSK1–HSK5, lệ phí thi và lộ trình học tiếng Trung cho người mới, cân bằng giữa search intent và cấu trúc nội dung rõ ràng.","Education Content":"Nội dung giáo dục","Competitor Research":"Nghiên cứu đối thủ","Content Structure":"Cấu trúc nội dung","Researched search intent and competitor structures.":"Nghiên cứu search intent và cấu trúc bài viết của đối thủ.","Organized headings to avoid keyword stuffing and excessive subheadings.":"Sắp xếp heading hợp lý, tránh nhồi nhét từ khóa và chia quá nhiều tiêu đề phụ.","Suggested source directions and usable outlines for writers.":"Đề xuất nguồn tham khảo và dàn ý có thể triển khai trực tiếp cho người viết.","What It Shows":"Năng lực thể hiện","My ability to structure educational SEO content while keeping the reading experience useful and clear.":"Khả năng xây dựng cấu trúc nội dung SEO giáo dục vừa đáp ứng mục tiêu tìm kiếm, vừa đảm bảo trải nghiệm đọc rõ ràng và hữu ích.","Public portfolio note: business figures are rounded where appropriate. Private lead lists, internal reports, and customer/student identities are not displayed.":"Lưu ý: các số liệu kinh doanh đã được làm tròn khi cần thiết. Danh sách lead, báo cáo nội bộ và thông tin nhận dạng của khách hàng/học viên không được công khai.","My Journey":"Hành trình của mình","Experience &":"Kinh nghiệm &","Education":"Học vấn","Marketing Intern / Content & Branding Support":"Marketing Intern / Hỗ trợ Content & Branding","Supported content marketing and branding for an education and study-abroad brand, including monthly content plans, around 40 content pieces per month, social media posts, campaign concepts, visual briefs, SEO outlines, testimonial content, internal communication, and video script ideas.":"Hỗ trợ hoạt động content marketing và branding cho thương hiệu giáo dục – du học, bao gồm kế hoạch nội dung theo tháng, khoảng 40 nội dung mỗi tháng, bài đăng mạng xã hội, ý tưởng chiến dịch, visual brief, dàn ý SEO, testimonial, truyền thông nội bộ và ý tưởng kịch bản video.","Views / 28 days":"Lượt xem / 28 ngày","Interactions":"Lượt tương tác","New followers":"Người theo dõi mới","Conversations started":"Cuộc trò chuyện bắt đầu","These figures reflect page performance during a period when I contributed to content planning and execution; they are not presented as individual-only performance.":"Các số liệu trên phản ánh hiệu quả của trang trong giai đoạn mình tham gia lên kế hoạch và triển khai nội dung; đây không phải là thành tích do cá nhân mình tạo ra hoàn toàn.","Branding & Market Research Intern":"Thực tập sinh Branding & Nghiên cứu thị trường","Assisted with market research, competitor analysis, customer insight, brand positioning, tone of voice, and content ideation for branding projects.":"Hỗ trợ nghiên cứu thị trường, phân tích đối thủ, khai thác insight khách hàng, định vị thương hiệu, tone of voice và phát triển ý tưởng nội dung cho các dự án branding.","Graduate-to-be":"Sắp tốt nghiệp","BBA in Marketing":"Cử nhân Quản trị Kinh doanh – Marketing","Industrial University of Ho Chi Minh City":"Trường Đại học Công nghiệp TP. Hồ Chí Minh","Studied marketing, consumer behavior, market research, branding, and business strategy. Completed a graduation thesis on online food-delivery continuance intention among young consumers in Ho Chi Minh City.":"Được đào tạo về marketing, hành vi người tiêu dùng, nghiên cứu thị trường, branding và chiến lược kinh doanh. Hoàn thành khóa luận tốt nghiệp về ý định tiếp tục sử dụng dịch vụ giao đồ ăn trực tuyến của người trẻ tại TP. Hồ Chí Minh.","How I Work":"Cách mình làm việc","Working":"Nguyên tắc","Principles":"làm việc","Start with the goal":"Bắt đầu từ mục tiêu","Before creating content, I clarify whether it needs to support awareness, engagement, referral, lead generation, customer care, or brand trust.":"Trước khi bắt tay vào nội dung, mình luôn xác định rõ mục tiêu: tăng nhận diện, tương tác, referral, tạo lead, chăm sóc khách hàng hay xây dựng niềm tin thương hiệu.","Keep the brand consistent":"Giữ thương hiệu nhất quán","I care about making content clear, consistent with the brand voice, and aligned with the overall communication direction.":"Mình chú trọng sự rõ ràng, nhất quán với tiếng nói thương hiệu và phù hợp với định hướng truyền thông tổng thể.","Make ideas executable":"Biến ý tưởng thành sản phẩm có thể triển khai","I enjoy turning ideas into content directions, visual briefs, scripts, and social posts that can be used in real marketing activities.":"Mình thích biến ý tưởng thành định hướng nội dung, visual brief, kịch bản và bài đăng có thể sử dụng trực tiếp trong các hoạt động marketing thực tế.","Let’s Connect":"Kết nối cùng mình","Let’s create content that":"Cùng tạo nên nội dung","connects and performs.":"chạm đúng người, tạo đúng giá trị.","I’m currently looking for opportunities in Content Marketing, Branding, or Marketing Communication. If you’re looking for a young marketer who can support content planning, brand communication, and campaign execution, I’d be happy to connect.":"Mình đang tìm kiếm cơ hội trong lĩnh vực Content Marketing, Branding hoặc Marketing Communication. Nếu bạn cần một marketer trẻ có thể hỗ trợ lập kế hoạch nội dung, truyền thông thương hiệu và triển khai chiến dịch, mình rất mong được kết nối.","Email":"Email","Location":"Địa điểm","Ho Chi Minh City, Vietnam":"TP. Hồ Chí Minh, Việt Nam","💌 Contact Me":"💌 Liên hệ với mình","© 2026 Rachel Phan — Content Marketing & Branding Portfolio":"© 2026 Rachel Phan — Portfolio Content Marketing & Branding","Content Marketing Fresher · Branding & Communication Focus":"Content Marketing Fresher · Định hướng Branding & Communication","LinkedIn":"LinkedIn","GitHub":"GitHub","Blog":"Blog","Content Strategy · Short-form Video · Lead Generation":"Chiến lược nội dung · Video ngắn · Tạo lead","TikTok Channel Growth — Trạm Du Học Trung Quốc":"Phát triển kênh TikTok — Trạm Du Học Trung Quốc","Built and optimized a new TikTok content channel for China study-abroad audiences, turning short-form content into reach, engagement, inboxes, leads, and supported revenue.":"Xây dựng và tối ưu một kênh TikTok mới cho nhóm quan tâm du học Trung Quốc, biến nội dung video ngắn thành lượt tiếp cận, tương tác, inbox, lead và doanh thu được hỗ trợ.","TikTok Strategy":"Chiến lược TikTok","Content Pillars":"Trụ cột nội dung","Video Script":"Kịch bản video","Performance Optimization":"Tối ưu hiệu quả nội dung","I joined the development of a new TikTok channel for the China study-abroad segment, with the goal of building the right audience, increasing brand awareness, and turning content into a lead source for student recruitment.":"Mình tham gia xây dựng một kênh TikTok mới cho mảng du học Trung Quốc, với mục tiêu phát triển đúng tệp người xem, tăng nhận diện thương hiệu và biến nội dung thành nguồn lead cho hoạt động tuyển sinh.","Researched student needs and high-interest topics related to studying in China.":"Nghiên cứu nhu cầu và các chủ đề học sinh quan tâm khi tìm hiểu du học Trung Quốc.","Developed content pillars, content angles, and topic groups for the channel.":"Phát triển content pillar, content angle và các nhóm chủ đề cho kênh.","Brainstormed ideas, wrote scripts, and shaped formats for short-form video.":"Brainstorm ý tưởng, viết kịch bản và định hướng format cho video ngắn.","Tracked performance by content group to identify topics and formats with stronger reach and engagement potential.":"Theo dõi hiệu quả theo từng nhóm nội dung để xác định chủ đề và format có khả năng tăng reach và engagement tốt hơn.","Adjusted content based on performance and guided viewers through attention → interest → inbox → lead.":"Điều chỉnh nội dung dựa trên performance và dẫn dắt người xem theo hành trình attention → interest → inbox → lead.","followers in 3 months":"followers sau 3 tháng","total views in July":"tổng lượt xem trong tháng 7","videos over 10K views":"video đạt trên 10K lượt xem","new followers in July":"followers mới trong tháng 7","inboxes in July":"inbox trong tháng 7","leads in July":"lead trong tháng 7","revenue supported in July":"doanh thu được hỗ trợ trong tháng 7","View TikTok channel ↗":"Xem kênh TikTok ↗","Brand Love · Referral Marketing · Customer Re-engagement":"Brand Love · Referral Marketing · Kết nối lại khách hàng","A Women’s Day campaign that reconnected ESORA with existing parents and students, strengthened brand love, and supported referral performance through emotional communication.":"Chiến dịch 8/3 giúp ESORA kết nối lại với phụ huynh và học viên hiện tại, tăng brand love và hỗ trợ hiệu quả referral thông qua truyền thông cảm xúc.","Campaign Content":"Nội dung chiến dịch","Visual Coordination":"Phối hợp hình ảnh","ESORA launched an 8/3 campaign to reconnect with existing parents and students, strengthen brand love, and introduce the referral program naturally instead of communicating through direct sales messaging.":"ESORA triển khai chiến dịch 8/3 nhằm kết nối lại với phụ huynh và học viên hiện tại, tăng brand love và giới thiệu referral program theo cách tự nhiên thay vì truyền thông bán hàng trực tiếp.","Received the campaign brief and referral objectives from the team.":"Nhận campaign brief và mục tiêu referral từ team.","Developed content ideas and angles based on the existing campaign direction.":"Phát triển content idea và content angle dựa trên campaign direction có sẵn.","Directly wrote and deployed social content for the campaign.":"Trực tiếp viết và triển khai social content cho chiến dịch.","Developed content around Women’s Day, student stories, customer engagement, and referral.":"Phát triển nội dung xoay quanh 8/3, student stories, customer engagement và referral.","Coordinated with designers to execute visual assets.":"Phối hợp với designer để triển khai visual cho các content asset.","Tracked content response and performance throughout the campaign.":"Theo dõi phản hồi và performance của nội dung trong suốt chiến dịch.","social posts":"bài đăng mạng xã hội","KOC Partnership · Lead Generation · Content Distribution":"Hợp tác KOC · Tạo lead · Phân phối nội dung","KOC Partnership — Content → Lead Generation":"Hợp tác KOC — Content → Lead Generation","Supported an external content-distribution partnership that expanded ESORA’s lead sources beyond owned media and connected creator content with lead-generation objectives.":"Hỗ trợ một partnership phân phối nội dung giúp ESORA mở rộng nguồn lead ngoài owned media và kết nối creator content với mục tiêu lead generation.","KOC Research":"Nghiên cứu KOC","Lead Generation":"Tạo lead","ESORA needed to expand lead sources beyond owned media and explored content distribution through creators and KOCs whose audiences matched the brand’s target segment.":"ESORA cần mở rộng nguồn lead ngoài owned media và tìm hướng phân phối nội dung thông qua creator/KOC có audience phù hợp với nhóm mục tiêu của thương hiệu.","Supported the collaboration process and working guidelines.":"Hỗ trợ xây dựng collaboration process và working guideline.","Coordinated content direction between the brand and KOC partners.":"Phối hợp content direction giữa brand và KOC.","Aligned the partnership with a clear lead-generation objective.":"Xác định và thống nhất mục tiêu lead generation cho partnership.","Supported the development of an external content-distribution channel outside owned media.":"Hỗ trợ phát triển một kênh phân phối nội dung bên ngoài owned media.","New lead source":"Nguồn lead mới","outside owned channels":"ngoài các kênh owned media","UGC · Testimonial · Storytelling · Brand Trust":"UGC · Testimonial · Storytelling · Brand Trust","Student Testimonial & Alumni Content":"Student Testimonial & Alumni Content","Turned real student and alumni experiences into authentic storytelling assets through interviews, scripts, shooting guidance, editing, and social content production.":"Biến trải nghiệm thật của học viên và alumni thành các storytelling asset chân thực thông qua phỏng vấn, kịch bản, hướng dẫn quay, edit và sản xuất social content.","Interview":"Phỏng vấn","Storytelling":"Storytelling","Editing":"Edit video","ESORA wanted to build a more authentic content source from current students and alumni, helping prospective students and parents understand real study-abroad experiences and strengthening brand trust.":"ESORA muốn xây dựng nguồn nội dung chân thực hơn từ học viên và alumni, giúp học sinh và phụ huynh tương lai hình dung rõ trải nghiệm du học thực tế và tăng brand trust.","Student Testimonial":"Student Testimonial","Directly connected with and interviewed 64 students/alumni to uncover their journeys and experiences.":"Trực tiếp kết nối và phỏng vấn 64 học viên/alumni để khai thác hành trình và trải nghiệm của từng nhân vật.","Built interview questions and flows to identify stories with communication value.":"Xây dựng câu hỏi và flow phỏng vấn nhằm tìm ra những câu chuyện có giá trị truyền thông.","Shaped storytelling so testimonials became real student stories rather than simple service reviews.":"Định hướng storytelling để testimonial trở thành real student story thay vì chỉ là review dịch vụ.","Converted interview material into social and video assets.":"Chuyển nội dung phỏng vấn thành các social và video asset phù hợp.","Alumni Content Series":"Chuỗi nội dung Alumni","Directly managed 3 alumni during content production.":"Trực tiếp quản lý 3 alumni trong quá trình sản xuất content.","Built content direction and brand angles for each person.":"Xây dựng content direction và brand angle cho từng nhân vật.","Wrote scripts and guided alumni on self-recording.":"Viết kịch bản và hướng dẫn alumni tự quay video.","Provided direction on delivery, shots, and flow to preserve natural expression while keeping the brand message clear.":"Hướng dẫn cách thể hiện, shot và flow để footage vừa tự nhiên vừa đảm bảo message của brand.","Edited alumni footage and completed final assets for social channels.":"Trực tiếp edit footage của alumni và hoàn thiện thành phẩm để đăng trên social channels.","students/alumni interviewed":"học viên/alumni được phỏng vấn","alumni managed for content":"alumni được quản lý trong quá trình sản xuất content","organic Facebook reach across 3 alumni videos":"organic Facebook reach của 3 video alumni","End-to-end":"Xuyên suốt","production workflow":"quy trình sản xuất","Workflow:":"Quy trình:","SEO Content · Search Intent · Editorial Writing":"SEO Content · Search Intent · Editorial Writing","SEO & Editorial Content":"SEO & Editorial Content","Built SEO outlines and long-form educational content around Chinese learning and study-abroad topics, combining search intent, useful structure, and authentic student stories.":"Xây dựng SEO outline và long-form educational content về học tiếng Trung và du học, kết hợp search intent, cấu trúc hữu ích và câu chuyện thật của học viên.","SEO Outline":"SEO Outline","Long-form Writing":"Long-form Writing","Editorial":"Editorial","Research":"Research","Alongside social content, I contributed to educational and SEO content designed to reach users who were actively searching for information about studying abroad and Chinese learning.":"Bên cạnh social content, mình tham gia phát triển educational và SEO content nhằm tiếp cận người dùng đang chủ động tìm kiếm thông tin về du học và học tiếng Trung.","Worked from target keyword sets defined for each topic.":"Nhận bộ target keyword đã được xác định cho từng chủ đề.","Built content outlines based on keywords and reader search intent.":"Xây dựng content outline dựa trên keyword và search intent của người đọc.","Developed heading structures with clear, reader-friendly information flow.":"Phát triển heading structure với flow thông tin rõ ràng và dễ đọc.","Researched and synthesized information from relevant sources.":"Research và tổng hợp thông tin từ các nguồn liên quan.","Directly wrote and completed long-form/editorial articles combining scholarship information with real student stories.":"Trực tiếp viết và hoàn thiện bài long-form/editorial kết hợp thông tin học bổng với câu chuyện thực tế của học viên.","Integrated ESORA naturally into the editorial flow without making the article feel overly promotional.":"Lồng ghép thông tin về ESORA một cách tự nhiên trong mạch bài, tránh cảm giác quảng cáo.","SEO outlines & articles":"SEO outline & bài viết","Published":"Đã xuất bản","editorial story":"bài editorial","first-page search ranking":"xếp hạng trang đầu tìm kiếm","Keyword":"Từ khóa","View published article ↗":"Xem bài đã xuất bản ↗","Event Communication · Storytelling · UGC · Multi-channel Content":"Truyền thông sự kiện · Storytelling · UGC · Nội dung đa kênh","ESORA Send-off 2026 — Event Content & Communication":"ESORA Send-off 2026 — Nội dung & Truyền thông sự kiện","Supported the content narrative and communication flow for ESORA’s 2026 send-off event, extending the experience beyond the venue through social content, media coverage, and student-generated content.":"Hỗ trợ xây dựng mạch nội dung và truyền thông cho ESORA Send-off 2026, kéo dài trải nghiệm vượt ra ngoài sự kiện thông qua social content, media coverage và student-generated content.","Event Content":"Nội dung sự kiện","MC Script":"Kịch bản MC","Post-event Content":"Nội dung hậu sự kiện","ESORA Send-off 2026 was a graduation and farewell event for students preparing to study abroad, built around the theme “Wings of Tomorrow — Dream. Dare. Depart.” The communication challenge was to create a consistent story throughout the event and extend its impact after the event through media and social content.":"ESORA Send-off 2026 là sự kiện tốt nghiệp và chia tay dành cho học viên chuẩn bị lên đường du học, với chủ đề “Wings of Tomorrow — Dream. Dare. Depart.” Bài toán truyền thông là tạo một câu chuyện xuyên suốt tại sự kiện và tiếp tục kéo dài hiệu ứng sau sự kiện qua media và social content.","Event Content & Program":"Nội dung & Chương trình sự kiện","Contributed to the event agenda and program flow.":"Tham gia xây dựng agenda và flow chương trình.","Wrote the MC script, transitions, and linking lines between program segments.":"Viết kịch bản MC, lời dẫn và phần chuyển tiếp giữa các nội dung trong chương trình.","Kept the event storytelling aligned with the “Wings of Tomorrow” theme and the students’ journey.":"Đảm bảo storytelling của chương trình bám theo chủ đề “Wings of Tomorrow” và hành trình của học viên.","Event Communication":"Truyền thông sự kiện","Developed content direction and communication assets before, during, and after the event.":"Phát triển content direction và communication asset trước, trong và sau sự kiện.","Coordinated content across ESORA and ESORA China fanpages.":"Phối hợp triển khai nội dung trên hai fanpage ESORA và ESORA China.","Created appreciation content for sponsors, guests, and students.":"Xây dựng nội dung tri ân nhà tài trợ, khách mời và học viên.","Developed post-event content to extend the conversation after the event.":"Phát triển post-event content để tiếp tục kéo dài conversation sau sự kiện.","Turned event photos, videos, and stories into social assets.":"Khai thác hình ảnh, video và câu chuyện từ sự kiện thành social asset.","Guided and leveraged student UGC after the event.":"Định hướng và khai thác UGC từ học viên sau sự kiện.","Supported content coordination for ESORA YouTube and related communication channels.":"Phối hợp nội dung cho YouTube ESORA và các kênh truyền thông liên quan.","attendees":"người tham dự","students":"học viên","sponsors — TPBank & Parkway":"nhà tài trợ — TPBank & Parkway","event photos":"ảnh sự kiện","raw video footage assets":"raw video footage","media coverage":"đưa tin truyền thông","Multi-channel amplification:":"Khuếch đại đa kênh:","Content in Motion":"Nội dung qua những thước phim","A few stories are better":"Có những câu chuyện nên được","seen in motion.":"kể bằng hình ảnh chuyển động.","Selected short-form, student-story, and event content. Video files are loaded from the repository only when needed.":"Một vài nội dung video ngắn, câu chuyện học viên và sự kiện tiêu biểu. Video được tải trực tiếp từ repository khi cần.","TikTok · Short-form Content":"TikTok · Nội dung video ngắn","A selected piece from the channel-growth project — built around audience insight, content pillars, and performance optimization.":"Một video tiêu biểu từ dự án phát triển kênh — được xây dựng dựa trên audience insight, content pillar và tối ưu performance.","Student Story · UGC":"Câu chuyện học viên · UGC","Alumni Storytelling":"Câu chuyện Alumni","Selected Video":"Video tiêu biểu","Short-form":"Video ngắn","Student Story":"Câu chuyện học viên","Event Recap":"Tổng kết sự kiện","Watch video":"Xem video","Student Stories":"Câu chuyện học viên","Student Testimonial & Alumni Videos":"Video Student Testimonial & Alumni","Selected video content from the alumni storytelling project.":"Các video tiêu biểu từ dự án kể chuyện cùng học viên và alumni.","Alumni Story 01":"Câu chuyện Alumni 01","Alumni Story 02":"Câu chuyện Alumni 02","Alumni Story 03":"Câu chuyện Alumni 03","Alumni Story 04":"Câu chuyện Alumni 04","Alumni Story 05":"Câu chuyện Alumni 05","Visual Highlights":"Hình ảnh nổi bật","TikTok channel growth":"Phát triển kênh TikTok","Content planning & performance tracking":"Lập kế hoạch nội dung & theo dõi performance","Alumni story 01":"Câu chuyện Alumni 01","Alumni story 02":"Câu chuyện Alumni 02","Alumni story 03":"Câu chuyện Alumni 03","Alumni story 04":"Câu chuyện Alumni 04","Alumni story 05":"Câu chuyện Alumni 05","8/3 campaign key visual":"Key visual chiến dịch 8/3","Campaign social content":"Social content của chiến dịch","KOC partner content channel":"Kênh nội dung đối tác KOC","Post-event communication ecosystem":"Hệ thống truyền thông sau sự kiện","Send-off content planning":"Kế hoạch nội dung Send-off","Published editorial article":"Bài editorial đã xuất bản","SEO / editorial content planning":"Kế hoạch SEO / editorial content"};
+  const translationsVI = {"About":"Giới thiệu","Skills":"Kỹ năng","Projects":"Dự án","Experience":"Kinh nghiệm","Contact":"Liên hệ","Let's Talk 💬":"Trao đổi nhé 💬","Hi there! I'm 👋":"Xin chào, mình là 👋","My (Rachel)":"My Phan","Phan":"(Rachel)","Content Marketing & Branding Fresher":"Content Marketing & Branding Fresher","I’m a Marketing graduate-to-be with nearly 1 year of hands-on experience in content marketing, branding, and communication. I create brand-focused content, campaign messages, visual briefs, and social media content that help ideas become clear, consistent, and ready to execute.":"Mình sắp tốt nghiệp ngành Marketing và có gần 1 năm kinh nghiệm thực tế về content marketing, branding và truyền thông. Mình xây dựng nội dung bám sát thương hiệu, thông điệp chiến dịch, visual brief và nội dung mạng xã hội, giúp ý tưởng trở nên rõ ràng, nhất quán và sẵn sàng triển khai.","⚙️ View My Work":"⚙️ Xem dự án","⬇ Download CV":"⬇ Tải CV","Year Hands-on Experience":"Năm kinh nghiệm thực tế","Marketing Projects":"Dự án marketing","About Me":"Về mình","Creating content that is clear, strategic, and":"Tạo ra nội dung rõ ràng, có định hướng và","ready to execute.":"sẵn sàng để triển khai.","I’m Rachel, a Marketing graduate-to-be based in Ho Chi Minh City. My main focus is content marketing and branding, especially creating content that is clear, consistent with the brand, and aligned with communication goals.":"Mình là Rachel, hiện sống tại TP. Hồ Chí Minh và sắp tốt nghiệp ngành Marketing. Mình tập trung vào content marketing và branding, đặc biệt là xây dựng nội dung rõ ràng, nhất quán với thương hiệu và đúng mục tiêu truyền thông.","Through my experience at ESORA Academy and HUMA Agency, I have worked on social media content, campaign concepts, visual briefs, brand messaging, SEO content outlines, testimonial content, and internal communication content.":"Trong thời gian làm việc tại ESORA Academy và HUMA Agency, mình đã tham gia xây dựng nội dung mạng xã hội, ý tưởng chiến dịch, visual brief, thông điệp thương hiệu, dàn ý SEO, nội dung testimonial và truyền thông nội bộ.","At ESORA Academy, I supported campaigns that combined emotional brand communication with business goals, including referral marketing, product launch communication, KOC lead generation, and student testimonial content.":"Tại ESORA Academy, mình tham gia các chiến dịch kết hợp cảm xúc thương hiệu với mục tiêu kinh doanh, gồm referral marketing, truyền thông ra mắt sản phẩm, tạo lead qua KOC và phát triển nội dung testimonial từ học viên.","I’m interested in Content Marketing and Branding roles where I can continue developing content that is not only well-written, but also clear, strategic, and useful for real marketing activities.":"Mình đang tìm kiếm cơ hội trong lĩnh vực Content Marketing và Branding, nơi mình có thể tiếp tục phát triển những nội dung không chỉ chỉn chu về câu chữ mà còn rõ ràng, có chiến lược và mang lại giá trị thực tế cho hoạt động marketing.","Content Marketing":"Content Marketing","Branding":"Branding","Campaign Communication":"Truyền thông chiến dịch","Visual Brief":"Visual Brief","Social Content":"Nội dung mạng xã hội","~1 Year":"Gần 1 năm","Hands-on Experience":"Kinh nghiệm thực tế","Content Pieces / Month":"Nội dung / tháng","KOC Leads / Month Supported":"Lead KOC / tháng được hỗ trợ","VND Referral Revenue Supported":"Doanh thu referral được hỗ trợ","What I Do Best":"Thế mạnh của mình","Skills &":"Kỹ năng &","Expertise":"Chuyên môn","Social captions, SEO outlines,":"Caption mạng xã hội, dàn ý SEO,","video scripts, campaign copy":"kịch bản video, nội dung chiến dịch","Brand messaging, tone of voice,":"Thông điệp thương hiệu, tone of voice,","positioning, storytelling":"định vị và storytelling","Referral, product launch,":"Referral, ra mắt sản phẩm,","internal & event content":"truyền thông nội bộ và sự kiện","Creative Brief":"Creative Brief","Visual direction, layouts,":"Định hướng hình ảnh, bố cục,","designer coordination":"phối hợp cùng designer","Marketing Communication":"Truyền thông Marketing","KOC support, UGC direction,":"Hỗ trợ KOC, định hướng UGC,","customer re-engagement":"kết nối lại khách hàng","Tools":"Công cụ","Canva, Google Workspace, Sheets,":"Canva, Google Workspace, Sheets,","PowerPoint, SPSS, basic Power BI":"PowerPoint, SPSS, Power BI cơ bản","Selected Projects":"Dự án tiêu biểu","Content with":"Nội dung tạo ra","real business impact":"tác động kinh doanh thực tế","8/3 Referral Campaign":"Chiến dịch Referral 8/3","Brand Love · Referral Marketing":"Gắn kết thương hiệu · Referral Marketing","A Women’s Day campaign that reconnected ESORA with existing parents and students, strengthened brand love, and supported referral revenue.":"Chiến dịch Ngày Quốc tế Phụ nữ giúp ESORA kết nối lại với phụ huynh và học viên hiện tại, tăng sự gắn kết với thương hiệu và hỗ trợ doanh thu referral.","Brand Communication":"Truyền thông thương hiệu","Customer Re-engagement":"Kết nối lại khách hàng","View case study":"Xem case study","Context & Role":"Bối cảnh & Vai trò","In March 2026, ESORA Academy launched a Women’s Day campaign to reconnect with existing customers and introduce its referral program naturally. I supported campaign direction and content communication.":"Tháng 3/2026, ESORA Academy triển khai chiến dịch 8/3 nhằm kết nối lại với khách hàng hiện tại và giới thiệu chương trình referral theo cách tự nhiên hơn. Mình hỗ trợ định hướng chiến dịch và nội dung truyền thông.","What I Did":"Những gì mình thực hiện","Created communication content for photo check-ins and gift activities.":"Xây dựng nội dung truyền thông cho hoạt động check-in chụp ảnh và tặng quà.","Developed emotional content angles around appreciation and parent–student relationships.":"Phát triển các góc nội dung cảm xúc về sự trân trọng và mối quan hệ phụ huynh – học viên.","Connected brand-love activities with referral messaging.":"Kết nối hoạt động gia tăng tình cảm thương hiệu với thông điệp referral.","Created social posts and coordinated ideas for student wishes, clips, and customer-care touchpoints.":"Xây dựng bài đăng mạng xã hội và phối hợp ý tưởng cho lời chúc của học viên, video ngắn và các điểm chạm chăm sóc khách hàng.","Results":"Kết quả","active parents/customers":"phụ huynh/khách hàng đang hoạt động","referral contracts":"hợp đồng referral","revenue supported":"doanh thu được hỗ trợ","social posts published":"bài đăng được xuất bản","Summer China Program":"Chương trình hè Trung Quốc","Beijing & Tianjin":"Bắc Kinh & Thiên Tân","Product Communication · Education Marketing":"Truyền thông sản phẩm · Education Marketing","Summer China Program Launch":"Ra mắt chương trình hè Trung Quốc","A product communication project for students aged 15+ seeking cultural exposure, university experience, and stronger scholarship profiles.":"Dự án truyền thông sản phẩm dành cho học sinh từ 15 tuổi muốn trải nghiệm văn hóa, môi trường đại học và xây dựng hồ sơ học bổng tốt hơn.","Audience Research":"Nghiên cứu đối tượng","My Role":"Vai trò của mình","I supported target-audience research, content direction, and communication angles for Facebook, Instagram, and TikTok.":"Mình hỗ trợ nghiên cứu đối tượng mục tiêu, định hướng nội dung và phát triển góc truyền thông cho Facebook, Instagram và TikTok.","Mapped student motivations and scholarship-related pain points.":"Phân tích động lực và những khó khăn của học sinh liên quan đến việc chuẩn bị hồ sơ học bổng.","Positioned the program as an early profile-building experience, not only a summer trip.":"Định vị chương trình như một trải nghiệm xây dựng hồ sơ từ sớm, thay vì chỉ là một chuyến đi hè.","Supported social assets that explained the program’s practical value.":"Hỗ trợ phát triển nội dung mạng xã hội nhằm truyền tải rõ giá trị thực tế của chương trình.","organic TikTok views":"lượt xem TikTok tự nhiên","enrolled students":"học viên đăng ký","Break-even":"Hòa vốn","target achieved":"đạt mục tiêu","New product":"Sản phẩm mới","awareness supported":"được hỗ trợ nhận diện","KOC Lead Generation":"Tạo lead qua KOC","Partnership":"Hợp tác","KOC Partnership · Lead Generation":"Hợp tác KOC · Tạo lead","KOC Lead Generation Partnership":"Dự án hợp tác tạo lead qua KOC","A partnership project that expanded content distribution and supported a new qualified-lead source outside the brand’s owned channels.":"Dự án hợp tác giúp mở rộng kênh phân phối nội dung và tạo thêm nguồn lead chất lượng ngoài các kênh sở hữu của thương hiệu.","Content Distribution":"Phân phối nội dung","Partnership Support":"Hỗ trợ đối tác","Researched and shortlisted relevant KOC partners.":"Nghiên cứu và sàng lọc các KOC phù hợp.","Supported collaboration policies and working processes.":"Hỗ trợ xây dựng chính sách hợp tác và quy trình làm việc.","Coordinated content direction and lead-generation goals.":"Phối hợp định hướng nội dung và mục tiêu tạo lead.","Helped build an external lead source for the brand.":"Góp phần xây dựng nguồn lead bên ngoài cho thương hiệu.","Result":"Kết quả","qualified leads / month":"lead chất lượng / tháng","New channel":"Kênh mới","outside owned media":"ngoài kênh sở hữu","Student Ambassador &":"Đại sứ học viên &","UGC Content Project":"Dự án nội dung UGC","UGC · Testimonial · Brand Trust":"UGC · Testimonial · Niềm tin thương hiệu","Student Ambassador & UGC Content":"Dự án Đại sứ học viên & Nội dung UGC","A project that transformed real student and alumni experiences into authentic brand communication assets.":"Dự án chuyển hóa trải nghiệm thật của học viên và cựu học viên thành tài sản truyền thông chân thực cho thương hiệu.","Content Direction":"Định hướng nội dung","Story Development":"Phát triển câu chuyện","Managed communication with 64 students and alumni.":"Phụ trách trao đổi với 64 học viên và cựu học viên.","Created video directions, script guidance, and storytelling angles.":"Xây dựng định hướng video, hướng dẫn kịch bản và góc kể chuyện.","Helped shape relatable testimonial and UGC content for social media.":"Góp phần phát triển nội dung testimonial và UGC gần gũi cho mạng xã hội.","student/alumni contacts":"học viên/cựu học viên được kết nối","organic Facebook reach on one video":"lượt tiếp cận Facebook tự nhiên của một video","Long-term":"Dài hạn","testimonial source built":"xây dựng nguồn testimonial","Authentic":"Chân thực","brand trust assets":"tài sản tạo niềm tin thương hiệu","HSK SEO Content Planning":"Lập kế hoạch nội dung SEO HSK","SEO Content · Search Intent":"Nội dung SEO · Search Intent","Built reader-friendly SEO outlines for HSK1–HSK5, exam fees, and beginner Chinese-learning topics, balancing search intent with clear content structure.":"Xây dựng dàn ý SEO dễ đọc cho các chủ đề HSK1–HSK5, lệ phí thi và lộ trình học tiếng Trung cho người mới, cân bằng giữa search intent và cấu trúc nội dung rõ ràng.","Education Content":"Nội dung giáo dục","Competitor Research":"Nghiên cứu đối thủ","Content Structure":"Cấu trúc nội dung","Researched search intent and competitor structures.":"Nghiên cứu search intent và cấu trúc bài viết của đối thủ.","Organized headings to avoid keyword stuffing and excessive subheadings.":"Sắp xếp heading hợp lý, tránh nhồi nhét từ khóa và chia quá nhiều tiêu đề phụ.","Suggested source directions and usable outlines for writers.":"Đề xuất nguồn tham khảo và dàn ý có thể triển khai trực tiếp cho người viết.","What It Shows":"Năng lực thể hiện","My ability to structure educational SEO content while keeping the reading experience useful and clear.":"Khả năng xây dựng cấu trúc nội dung SEO giáo dục vừa đáp ứng mục tiêu tìm kiếm, vừa đảm bảo trải nghiệm đọc rõ ràng và hữu ích.","Public portfolio note: business figures are rounded where appropriate. Private lead lists, internal reports, and customer/student identities are not displayed.":"Lưu ý: các số liệu kinh doanh đã được làm tròn khi cần thiết. Danh sách lead, báo cáo nội bộ và thông tin nhận dạng của khách hàng/học viên không được công khai.","My Journey":"Hành trình của mình","Experience &":"Kinh nghiệm &","Education":"Học vấn","Marketing Intern / Content & Branding Support":"Marketing Intern / Hỗ trợ Content & Branding","Supported content marketing and branding for an education and study-abroad brand, including monthly content plans, around 40 content pieces per month, social media posts, campaign concepts, visual briefs, SEO outlines, testimonial content, internal communication, and video script ideas.":"Hỗ trợ hoạt động content marketing và branding cho thương hiệu giáo dục – du học, bao gồm kế hoạch nội dung theo tháng, khoảng 40 nội dung mỗi tháng, bài đăng mạng xã hội, ý tưởng chiến dịch, visual brief, dàn ý SEO, testimonial, truyền thông nội bộ và ý tưởng kịch bản video.","Views / 28 days":"Lượt xem / 28 ngày","Interactions":"Lượt tương tác","New followers":"Người theo dõi mới","Conversations started":"Cuộc trò chuyện bắt đầu","These figures reflect page performance during a period when I contributed to content planning and execution; they are not presented as individual-only performance.":"Các số liệu trên phản ánh hiệu quả của trang trong giai đoạn mình tham gia lên kế hoạch và triển khai nội dung; đây không phải là thành tích do cá nhân mình tạo ra hoàn toàn.","Branding & Market Research Intern":"Thực tập sinh Branding & Nghiên cứu thị trường","Assisted with market research, competitor analysis, customer insight, brand positioning, tone of voice, and content ideation for branding projects.":"Hỗ trợ nghiên cứu thị trường, phân tích đối thủ, khai thác insight khách hàng, định vị thương hiệu, tone of voice và phát triển ý tưởng nội dung cho các dự án branding.","Graduate-to-be":"Sắp tốt nghiệp","BBA in Marketing":"Cử nhân Quản trị Kinh doanh – Marketing","Industrial University of Ho Chi Minh City":"Trường Đại học Công nghiệp TP. Hồ Chí Minh","Studied marketing, consumer behavior, market research, branding, and business strategy. Completed a graduation thesis on online food-delivery continuance intention among young consumers in Ho Chi Minh City.":"Được đào tạo về marketing, hành vi người tiêu dùng, nghiên cứu thị trường, branding và chiến lược kinh doanh. Hoàn thành khóa luận tốt nghiệp về ý định tiếp tục sử dụng dịch vụ giao đồ ăn trực tuyến của người trẻ tại TP. Hồ Chí Minh.","How I Work":"Cách mình làm việc","Working":"Nguyên tắc","Principles":"làm việc","Start with the goal":"Bắt đầu từ mục tiêu","Before creating content, I clarify whether it needs to support awareness, engagement, referral, lead generation, customer care, or brand trust.":"Trước khi bắt tay vào nội dung, mình luôn xác định rõ mục tiêu: tăng nhận diện, tương tác, referral, tạo lead, chăm sóc khách hàng hay xây dựng niềm tin thương hiệu.","Keep the brand consistent":"Giữ thương hiệu nhất quán","I care about making content clear, consistent with the brand voice, and aligned with the overall communication direction.":"Mình chú trọng sự rõ ràng, nhất quán với tiếng nói thương hiệu và phù hợp với định hướng truyền thông tổng thể.","Make ideas executable":"Biến ý tưởng thành sản phẩm có thể triển khai","I enjoy turning ideas into content directions, visual briefs, scripts, and social posts that can be used in real marketing activities.":"Mình thích biến ý tưởng thành định hướng nội dung, visual brief, kịch bản và bài đăng có thể sử dụng trực tiếp trong các hoạt động marketing thực tế.","Let’s Connect":"Kết nối cùng mình","Let’s create content that":"Cùng tạo nên nội dung","connects and performs.":"chạm đúng người, tạo đúng giá trị.","I’m currently looking for opportunities in Content Marketing, Branding, or Marketing Communication. If you’re looking for a young marketer who can support content planning, brand communication, and campaign execution, I’d be happy to connect.":"Mình đang tìm kiếm cơ hội trong lĩnh vực Content Marketing, Branding hoặc Marketing Communication. Nếu bạn cần một marketer trẻ có thể hỗ trợ lập kế hoạch nội dung, truyền thông thương hiệu và triển khai chiến dịch, mình rất mong được kết nối.","Email":"Email","Location":"Địa điểm","Ho Chi Minh City, Vietnam":"TP. Hồ Chí Minh, Việt Nam","💌 Contact Me":"💌 Liên hệ với mình","© 2026 Rachel Phan — Content Marketing & Branding Portfolio":"© 2026 Rachel Phan — Portfolio Content Marketing & Branding","Content Marketing Fresher · Branding & Communication Focus":"Content Marketing Fresher · Định hướng Branding & Communication","LinkedIn":"LinkedIn","GitHub":"GitHub","Blog":"Blog","Content Strategy · Short-form Video · Lead Generation":"Chiến lược nội dung · Video ngắn · Tạo lead","TikTok Channel Growth — Trạm Du Học Trung Quốc":"Phát triển kênh TikTok — Trạm Du Học Trung Quốc","Built and optimized a new TikTok content channel for China study-abroad audiences, turning short-form content into reach, engagement, inboxes, leads, and supported revenue.":"Xây dựng và tối ưu một kênh TikTok mới cho nhóm quan tâm du học Trung Quốc, biến nội dung video ngắn thành lượt tiếp cận, tương tác, inbox, lead và doanh thu được hỗ trợ.","TikTok Strategy":"Chiến lược TikTok","Content Pillars":"Trụ cột nội dung","Video Script":"Kịch bản video","Performance Optimization":"Tối ưu hiệu quả nội dung","I joined the development of a new TikTok channel for the China study-abroad segment, with the goal of building the right audience, increasing brand awareness, and turning content into a lead source for student recruitment.":"Mình tham gia xây dựng một kênh TikTok mới cho mảng du học Trung Quốc, với mục tiêu phát triển đúng tệp người xem, tăng nhận diện thương hiệu và biến nội dung thành nguồn lead cho hoạt động tuyển sinh.","Researched student needs and high-interest topics related to studying in China.":"Nghiên cứu nhu cầu và các chủ đề học sinh quan tâm khi tìm hiểu du học Trung Quốc.","Developed content pillars, content angles, and topic groups for the channel.":"Phát triển content pillar, content angle và các nhóm chủ đề cho kênh.","Brainstormed ideas, wrote scripts, and shaped formats for short-form video.":"Brainstorm ý tưởng, viết kịch bản và định hướng format cho video ngắn.","Tracked performance by content group to identify topics and formats with stronger reach and engagement potential.":"Theo dõi hiệu quả theo từng nhóm nội dung để xác định chủ đề và format có khả năng tăng reach và engagement tốt hơn.","Adjusted content based on performance and guided viewers through attention → interest → inbox → lead.":"Điều chỉnh nội dung dựa trên performance và dẫn dắt người xem theo hành trình attention → interest → inbox → lead.","followers in 3 months":"followers sau 3 tháng","total views in July":"tổng lượt xem trong tháng 7","videos over 10K views":"video đạt trên 10K lượt xem","new followers in July":"followers mới trong tháng 7","inboxes in July":"inbox trong tháng 7","leads in July":"lead trong tháng 7","revenue supported in July":"doanh thu được hỗ trợ trong tháng 7","View TikTok channel ↗":"Xem kênh TikTok ↗","Brand Love · Referral Marketing · Customer Re-engagement":"Brand Love · Referral Marketing · Kết nối lại khách hàng","A Women’s Day campaign that reconnected ESORA with existing parents and students, strengthened brand love, and supported referral performance through emotional communication.":"Chiến dịch 8/3 giúp ESORA kết nối lại với phụ huynh và học viên hiện tại, tăng brand love và hỗ trợ hiệu quả referral thông qua truyền thông cảm xúc.","Campaign Content":"Nội dung chiến dịch","Visual Coordination":"Phối hợp hình ảnh","ESORA launched an 8/3 campaign to reconnect with existing parents and students, strengthen brand love, and introduce the referral program naturally instead of communicating through direct sales messaging.":"ESORA triển khai chiến dịch 8/3 nhằm kết nối lại với phụ huynh và học viên hiện tại, tăng brand love và giới thiệu referral program theo cách tự nhiên thay vì truyền thông bán hàng trực tiếp.","Received the campaign brief and referral objectives from the team.":"Nhận campaign brief và mục tiêu referral từ team.","Developed content ideas and angles based on the existing campaign direction.":"Phát triển content idea và content angle dựa trên campaign direction có sẵn.","Directly wrote and deployed social content for the campaign.":"Trực tiếp viết và triển khai social content cho chiến dịch.","Developed content around Women’s Day, student stories, customer engagement, and referral.":"Phát triển nội dung xoay quanh 8/3, student stories, customer engagement và referral.","Coordinated with designers to execute visual assets.":"Phối hợp với designer để triển khai visual cho các content asset.","Tracked content response and performance throughout the campaign.":"Theo dõi phản hồi và performance của nội dung trong suốt chiến dịch.","social posts":"bài đăng mạng xã hội","KOC Partnership · Lead Generation · Content Distribution":"Hợp tác KOC · Tạo lead · Phân phối nội dung","KOC Partnership — Content → Lead Generation":"Hợp tác KOC — Content → Lead Generation","Supported an external content-distribution partnership that expanded ESORA’s lead sources beyond owned media and connected creator content with lead-generation objectives.":"Hỗ trợ một partnership phân phối nội dung giúp ESORA mở rộng nguồn lead ngoài owned media và kết nối creator content với mục tiêu lead generation.","KOC Research":"Nghiên cứu KOC","Lead Generation":"Tạo lead","ESORA needed to expand lead sources beyond owned media and explored content distribution through creators and KOCs whose audiences matched the brand’s target segment.":"ESORA cần mở rộng nguồn lead ngoài owned media và tìm hướng phân phối nội dung thông qua creator/KOC có audience phù hợp với nhóm mục tiêu của thương hiệu.","Supported the collaboration process and working guidelines.":"Hỗ trợ xây dựng collaboration process và working guideline.","Coordinated content direction between the brand and KOC partners.":"Phối hợp content direction giữa brand và KOC.","Aligned the partnership with a clear lead-generation objective.":"Xác định và thống nhất mục tiêu lead generation cho partnership.","Supported the development of an external content-distribution channel outside owned media.":"Hỗ trợ phát triển một kênh phân phối nội dung bên ngoài owned media.","New lead source":"Nguồn lead mới","outside owned channels":"ngoài các kênh owned media","UGC · Testimonial · Storytelling · Brand Trust":"UGC · Testimonial · Storytelling · Brand Trust","Student Testimonial & Alumni Content":"Student Testimonial & Alumni Content","Turned real student and alumni experiences into authentic storytelling assets through interviews, scripts, shooting guidance, editing, and social content production.":"Biến trải nghiệm thật của học viên và alumni thành các storytelling asset chân thực thông qua phỏng vấn, kịch bản, hướng dẫn quay, edit và sản xuất social content.","Interview":"Phỏng vấn","Storytelling":"Storytelling","Editing":"Edit video","ESORA wanted to build a more authentic content source from current students and alumni, helping prospective students and parents understand real study-abroad experiences and strengthening brand trust.":"ESORA muốn xây dựng nguồn nội dung chân thực hơn từ học viên và alumni, giúp học sinh và phụ huynh tương lai hình dung rõ trải nghiệm du học thực tế và tăng brand trust.","Student Testimonial":"Student Testimonial","Directly connected with and interviewed 64 students/alumni to uncover their journeys and experiences.":"Trực tiếp kết nối và phỏng vấn 64 học viên/alumni để khai thác hành trình và trải nghiệm của từng nhân vật.","Built interview questions and flows to identify stories with communication value.":"Xây dựng câu hỏi và flow phỏng vấn nhằm tìm ra những câu chuyện có giá trị truyền thông.","Shaped storytelling so testimonials became real student stories rather than simple service reviews.":"Định hướng storytelling để testimonial trở thành real student story thay vì chỉ là review dịch vụ.","Converted interview material into social and video assets.":"Chuyển nội dung phỏng vấn thành các social và video asset phù hợp.","Alumni Content Series":"Chuỗi nội dung Alumni","Directly managed 3 alumni during content production.":"Trực tiếp quản lý 3 alumni trong quá trình sản xuất content.","Built content direction and brand angles for each person.":"Xây dựng content direction và brand angle cho từng nhân vật.","Wrote scripts and guided alumni on self-recording.":"Viết kịch bản và hướng dẫn alumni tự quay video.","Provided direction on delivery, shots, and flow to preserve natural expression while keeping the brand message clear.":"Hướng dẫn cách thể hiện, shot và flow để footage vừa tự nhiên vừa đảm bảo message của brand.","Edited alumni footage and completed final assets for social channels.":"Trực tiếp edit footage của alumni và hoàn thiện thành phẩm để đăng trên social channels.","students/alumni interviewed":"học viên/alumni được phỏng vấn","alumni managed for content":"alumni được quản lý trong quá trình sản xuất content","organic Facebook reach across 3 alumni videos":"organic Facebook reach của 3 video alumni","End-to-end":"Xuyên suốt","production workflow":"quy trình sản xuất","Workflow:":"Quy trình:","SEO Content · Search Intent · Editorial Writing":"SEO Content · Search Intent · Editorial Writing","SEO & Editorial Content":"SEO & Editorial Content","Built SEO outlines and long-form educational content around Chinese learning and study-abroad topics, combining search intent, useful structure, and authentic student stories.":"Xây dựng SEO outline và long-form educational content về học tiếng Trung và du học, kết hợp search intent, cấu trúc hữu ích và câu chuyện thật của học viên.","SEO Outline":"SEO Outline","Long-form Writing":"Long-form Writing","Editorial":"Editorial","Research":"Research","Alongside social content, I contributed to educational and SEO content designed to reach users who were actively searching for information about studying abroad and Chinese learning.":"Bên cạnh social content, mình tham gia phát triển educational và SEO content nhằm tiếp cận người dùng đang chủ động tìm kiếm thông tin về du học và học tiếng Trung.","Worked from target keyword sets defined for each topic.":"Nhận bộ target keyword đã được xác định cho từng chủ đề.","Built content outlines based on keywords and reader search intent.":"Xây dựng content outline dựa trên keyword và search intent của người đọc.","Developed heading structures with clear, reader-friendly information flow.":"Phát triển heading structure với flow thông tin rõ ràng và dễ đọc.","Researched and synthesized information from relevant sources.":"Research và tổng hợp thông tin từ các nguồn liên quan.","Directly wrote and completed long-form/editorial articles combining scholarship information with real student stories.":"Trực tiếp viết và hoàn thiện bài long-form/editorial kết hợp thông tin học bổng với câu chuyện thực tế của học viên.","Integrated ESORA naturally into the editorial flow without making the article feel overly promotional.":"Lồng ghép thông tin về ESORA một cách tự nhiên trong mạch bài, tránh cảm giác quảng cáo.","SEO outlines & articles":"SEO outline & bài viết","Published":"Đã xuất bản","editorial story":"bài editorial","first-page search ranking":"xếp hạng trang đầu tìm kiếm","Keyword":"Từ khóa","View published article ↗":"Xem bài đã xuất bản ↗","Event Communication · Storytelling · UGC · Multi-channel Content":"Truyền thông sự kiện · Storytelling · UGC · Nội dung đa kênh","ESORA Send-off 2026 — Event Content & Communication":"ESORA Send-off 2026 — Nội dung & Truyền thông sự kiện","Supported the content narrative and communication flow for ESORA’s 2026 send-off event, extending the experience beyond the venue through social content, media coverage, and student-generated content.":"Hỗ trợ xây dựng mạch nội dung và truyền thông cho ESORA Send-off 2026, kéo dài trải nghiệm vượt ra ngoài sự kiện thông qua social content, media coverage và student-generated content.","Event Content":"Nội dung sự kiện","MC Script":"Kịch bản MC","Post-event Content":"Nội dung hậu sự kiện","ESORA Send-off 2026 was a graduation and farewell event for students preparing to study abroad, built around the theme “Wings of Tomorrow — Dream. Dare. Depart.” The communication challenge was to create a consistent story throughout the event and extend its impact after the event through media and social content.":"ESORA Send-off 2026 là sự kiện tốt nghiệp và chia tay dành cho học viên chuẩn bị lên đường du học, với chủ đề “Wings of Tomorrow — Dream. Dare. Depart.” Bài toán truyền thông là tạo một câu chuyện xuyên suốt tại sự kiện và tiếp tục kéo dài hiệu ứng sau sự kiện qua media và social content.","Event Content & Program":"Nội dung & Chương trình sự kiện","Contributed to the event agenda and program flow.":"Tham gia xây dựng agenda và flow chương trình.","Wrote the MC script, transitions, and linking lines between program segments.":"Viết kịch bản MC, lời dẫn và phần chuyển tiếp giữa các nội dung trong chương trình.","Kept the event storytelling aligned with the “Wings of Tomorrow” theme and the students’ journey.":"Đảm bảo storytelling của chương trình bám theo chủ đề “Wings of Tomorrow” và hành trình của học viên.","Event Communication":"Truyền thông sự kiện","Developed content direction and communication assets before, during, and after the event.":"Phát triển content direction và communication asset trước, trong và sau sự kiện.","Coordinated content across ESORA and ESORA China fanpages.":"Phối hợp triển khai nội dung trên hai fanpage ESORA và ESORA China.","Created appreciation content for sponsors, guests, and students.":"Xây dựng nội dung tri ân nhà tài trợ, khách mời và học viên.","Developed post-event content to extend the conversation after the event.":"Phát triển post-event content để tiếp tục kéo dài conversation sau sự kiện.","Turned event photos, videos, and stories into social assets.":"Khai thác hình ảnh, video và câu chuyện từ sự kiện thành social asset.","Guided and leveraged student UGC after the event.":"Định hướng và khai thác UGC từ học viên sau sự kiện.","Supported content coordination for ESORA YouTube and related communication channels.":"Phối hợp nội dung cho YouTube ESORA và các kênh truyền thông liên quan.","attendees":"người tham dự","students":"học viên","sponsors — TPBank & Parkway":"nhà tài trợ — TPBank & Parkway","event photos":"ảnh sự kiện","raw video footage assets":"raw video footage","media coverage":"đưa tin truyền thông","Multi-channel amplification:":"Khuếch đại đa kênh:","Content in Motion":"Nội dung qua những thước phim","A few stories are better":"Có những câu chuyện nên được","seen in motion.":"kể bằng hình ảnh chuyển động.","Selected short-form, student-story, and event content. Video files are loaded from the repository only when needed.":"Một vài nội dung video ngắn, câu chuyện học viên và sự kiện tiêu biểu. Video được tải trực tiếp từ repository khi cần.","TikTok · Short-form Content":"TikTok · Nội dung video ngắn","A selected piece from the channel-growth project — built around audience insight, content pillars, and performance optimization.":"Một video tiêu biểu từ dự án phát triển kênh — được xây dựng dựa trên audience insight, content pillar và tối ưu performance.","Student Story · UGC":"Câu chuyện học viên · UGC","Alumni Storytelling":"Câu chuyện Alumni","Selected Video":"Video tiêu biểu","Short-form":"Video ngắn","Student Story":"Câu chuyện học viên","Event Recap":"Tổng kết sự kiện","Watch video":"Xem video","Student Stories":"Câu chuyện học viên","Student Testimonial & Alumni Videos":"Video Student Testimonial & Alumni","Selected video content from the alumni storytelling project.":"Các video tiêu biểu từ dự án kể chuyện cùng học viên và alumni.","Alumni Story 01":"Câu chuyện Alumni 01","Alumni Story 02":"Câu chuyện Alumni 02","Alumni Story 03":"Câu chuyện Alumni 03","Alumni Story 04":"Câu chuyện Alumni 04","Alumni Story 05":"Câu chuyện Alumni 05"};
   const bilingualNodes = [];
 
   function collectBilingualTextNodes() {
@@ -1704,65 +1469,40 @@
       <button class="video-modal-close" id="closeAlumniVideos" type="button" aria-label="Close">×</button>
     </div>
     <div class="alumni-video-grid">
-
       <div class="alumni-video-card">
-        <div class="drive-embed drive-embed-vertical">
-          <iframe
-            src="https://drive.google.com/file/d/1_JVh6kp_It2HwKZJY8RS-wTisi5ZV4oT/preview"
-            title="Alumni Story 01"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy"></iframe>
-        </div>
-        <div class="alumni-video-caption">Alumni Story 01</div>
-      </div>
-      <div class="alumni-video-card">
-        <div class="drive-embed drive-embed-vertical">
-          <iframe
-            src="https://drive.google.com/file/d/1nDkL2YRRkPufytJifdMBOIsnAZu1eJCf/preview"
-            title="Alumni Story 02"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy"></iframe>
-        </div>
-        <div class="alumni-video-caption">Alumni Story 02</div>
-      </div>
-      <div class="alumni-video-card">
-        <div class="drive-embed drive-embed-vertical">
-          <iframe
-            src="https://drive.google.com/file/d/11HW_oLSSQaL0xRRP4cE_J3OABZNAu1ay/preview"
-            title="Alumni Story 03"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy"></iframe>
-        </div>
-        <div class="alumni-video-caption">Alumni Story 03</div>
-      </div>
-      <div class="alumni-video-card">
-        <div class="drive-embed drive-embed-vertical">
-          <iframe
-            src="https://drive.google.com/file/d/134UMZhJTl-0OrMyjtQl-PE2UoUuBrPp2/preview"
-            title="Alumni Story 04"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy"></iframe>
-        </div>
-        <div class="alumni-video-caption">Alumni Story 04</div>
-      </div>
-      <div class="alumni-video-card">
-        <div class="drive-embed drive-embed-vertical">
-          <iframe
-            src="https://drive.google.com/file/d/1eOu6YtTzGPu1MB7TDreUdaeaTo8_xIU3/preview"
-            title="Alumni Story 05"
-            allow="autoplay; fullscreen"
-            allowfullscreen
-            loading="lazy"></iframe>
-        </div>
-        <div class="alumni-video-caption">Alumni Story 05</div>
-      </div>
+      <video controls playsinline preload="metadata">
+        <source src="./VIDEO/alumi-1.mp4" type="video/mp4">
+      </video>
+      <div class="alumni-video-caption">Alumni Story 01</div>
+    </div>
+<div class="alumni-video-card">
+      <video controls playsinline preload="metadata">
+        <source src="./VIDEO/alumi-2.mp4" type="video/mp4">
+      </video>
+      <div class="alumni-video-caption">Alumni Story 02</div>
+    </div>
+<div class="alumni-video-card">
+      <video controls playsinline preload="metadata">
+        <source src="./VIDEO/alumi-3.mp4" type="video/mp4">
+      </video>
+      <div class="alumni-video-caption">Alumni Story 03</div>
+    </div>
+<div class="alumni-video-card">
+      <video controls playsinline preload="metadata">
+        <source src="./VIDEO/alumi-4.mp4" type="video/mp4">
+      </video>
+      <div class="alumni-video-caption">Alumni Story 04</div>
+    </div>
+<div class="alumni-video-card">
+      <video controls playsinline preload="metadata">
+        <source src="./VIDEO/alumi-5.mp4" type="video/mp4">
+      </video>
+      <div class="alumni-video-caption">Alumni Story 05</div>
+    </div>
     </div>
   </div>
 </div>
+
 
 <script>
 (function(){
@@ -1780,7 +1520,7 @@
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden','true');
     document.body.style.overflow='';
-    
+    modal.querySelectorAll('video').forEach(v => v.pause());
   }
 
   openBtn.addEventListener('click', openVideos);
