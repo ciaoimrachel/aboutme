@@ -788,22 +788,6 @@
     grid-column: auto !important;
   }
 
-
-/* Google Drive embedded project video */
-.drive-video-wrap {
-  width:100%;
-  overflow:hidden;
-  border-radius:14px;
-  background:#f7edf1;
-  aspect-ratio:16 / 9;
-}
-.drive-video-wrap iframe {
-  width:100%;
-  height:100%;
-  display:block;
-  border:0;
-}
-
 </style>
 </head>
 <body>
@@ -1203,14 +1187,9 @@
 
 <div class="project-video-highlight">
   <div class="video-label"><span>Selected Video</span><span>Event Recap</span></div>
-  <div class="drive-video-wrap">
-    <iframe
-      src="https://drive.google.com/file/d/1MdbSyPr2p8XDrS_vIKCMWlBeJPW6hjHF/preview"
-      title="ESORA Send-off 2026 — Wings of Tomorrow"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-      loading="lazy"></iframe>
-  </div>
+  <video controls playsinline muted preload="metadata">
+    <source src="./VIDEO/Send_off.mp4" type="video/mp4">
+  </video>
 </div>
 
 </details>
